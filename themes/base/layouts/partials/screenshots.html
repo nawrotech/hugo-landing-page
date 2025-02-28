@@ -1,0 +1,18 @@
+<section class="screenshots | text-center | bg-primary-400">
+    <div class="container | flow">
+        <h1 class="upper">{{ .section.title }}</h1>
+        <div class="wrapper">
+        {{ range .section.images }}
+    
+     
+                {{ partial "image.html" (
+                    dict "resourceSrc" (resources.GetMatch .img_path) 
+                          "altText"  .img_alt) }}
+        {{ end }}
+
+      
+ 
+        </div>
+   
+    </div>
+</section>

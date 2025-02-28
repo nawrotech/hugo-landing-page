@@ -1,0 +1,33 @@
+.testimonials {
+    --flow-space: 1.25rem;
+    padding-block: 4rem;
+  
+    ul {
+      display: grid;
+      gap: 3rem;
+      justify-content: center;
+  
+      @media(width > 62em) {
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+    figure {
+      max-inline-size: 30ch;
+  
+      blockquote {
+        font-style: italic;
+      }
+      
+    }
+  
+    img {
+      block-size: 96px;
+      inline-size: 96px;
+      border-radius: var(--borr-circle);
+      margin-inline: auto;
+    }
+  
+  }
+  

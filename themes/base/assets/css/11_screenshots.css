@@ -1,0 +1,15 @@
+.screenshots {
+  --flow-space: var(--spacing-48);
+  padding-block: var(--spacing-80);
+
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  img {
+    max-width: 200px;
+  }
+}

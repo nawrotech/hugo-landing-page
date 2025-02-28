@@ -1,0 +1,52 @@
+.home {
+    --flow-space: 2rem;
+    background-image: url("/images/header-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-block-size: 100vh;
+    text-align: center;
+  
+    strong {
+      color: var(--accent-400);
+    }
+  
+    h1 {
+      font-size: 2.25rem;
+  
+      @media (width > 62em) {
+        font-size: 3rem;
+      }
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .content {
+      max-inline-size: 50ch;
+    }
+  
+    .wrapper {
+      --nav-height: 4.5rem;
+      padding-block: calc(var(--nav-height) + 5rem);
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      gap: 2rem;
+      @media (width > 62em) {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+  
+      }
+     
+    }
+  
+    img {
+      max-inline-size: 300px;
+      @media (width > 48em) {
+        max-inline-size: 500px;
+    
+      }
+    }
+  }

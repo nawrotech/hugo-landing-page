@@ -1,0 +1,45 @@
+.footer {
+    padding-block: var(--spacing-96);
+    text-align: center;
+  
+  
+    @media (width > 48em) {
+      text-align: left;
+    }
+  
+    h2 {
+      font-size: var(--fs-20);
+    }
+  
+    .wrapper {
+      display: grid;
+      gap: var(--spacing-80);
+      max-inline-size: 500px;
+      margin-inline: auto;
+  
+      @media (width > 48em) {
+        max-inline-size: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+      }
+    }
+    
+  
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      
+      svg {
+        width: 55px;
+        height: 55px;
+      } 
+  
+    }
+  
+    a:hover {
+      color: var(--neutral-100);
+    }
+  
+  }
+  

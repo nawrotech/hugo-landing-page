@@ -1,0 +1,7 @@
+<article class="feature-card {{ .class }} | flow">
+    {{ partial (printf "icons/%s.html" .context.icon) .context }}
+    <div class="text-container | flow">
+        <h3>{{ .context.title }}</h3>
+        <p>{{ .context.text }}</p>
+    </div>
+</article>

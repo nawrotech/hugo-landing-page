@@ -1,0 +1,17 @@
+<section id="preview" class="preview | text-center">
+    <div class="container | flow">
+        <h2 class="section-title">{{ .section.title }}</h2>
+        <p class="section-subtitle">{{ .section.subtitle }}</p>
+
+        <div class="img-wrapper">
+            {{ partial "image.html" (
+                dict "resourceSrc" (resources.GetMatch .section.img_path) 
+                      "width" 900 
+                      "altText"  .section.img_alt) }}
+                <button>
+                    {{ partial "icons/play.html" . }}
+                </button>
+        </div>
+       
+    </div>
+</section>

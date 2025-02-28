@@ -1,0 +1,11 @@
+{{ $requestedSocials := . }}
+{{ $socials := site.Data.socials.links }}
+{{ $filtered := where $socials "name" "in" $requestedSocials }}
+
+{{ if eq (len $requestedSocials) 1 }}
+    {{ $filtered = index $filtered 0 }}
+{{ end }}
+
+{{ return $filtered }}
+
+

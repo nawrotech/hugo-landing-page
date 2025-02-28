@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within {
+scroll-behavior: smooth;
+}
+
+a:not([class]) {
+text-decoration-skip-ink: auto;
+} 
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  &:hover {
+      cursor: pointer;
+  }
+}
+
+img,
+picture {
+  max-inline-size: 100%;
+  display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+:is(h1,h2,h3,h4,h5,h6) {
+  line-height: 1.1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+html:focus-within {
+ scroll-behavior: auto;
+}
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+svg {
+    fill: var(--accent-400);
+    width: 32px;
+    height: 32px;
+  }
+  
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: serif;
+  color: var(--neutral-100);
+  font-family: var(--ff-sans);
+}

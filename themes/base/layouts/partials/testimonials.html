@@ -1,0 +1,22 @@
+<section id="testimonials" class="testimonials |  text-center | bg-primary-500">
+    <div class="container">
+        <ul>
+            {{ range .section.items }}
+                <li>
+                    <figure class="card | flow">
+                        {{ with (resources.Get .avatar_img_path) }}
+                            {{ partial "image.html" (dict 
+                                "resourceSrc" .
+                                "width" 96
+                                "altText" "avatar-icon"
+                                ) }}
+                        {{ end }}
+                        {{ .text | markdownify }}
+                        <figcaption class="fw-700">{{ .author }}</figcaption>
+                    </figure>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+

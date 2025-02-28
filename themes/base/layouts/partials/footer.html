@@ -1,0 +1,36 @@
+{{ $socials := .Site.Data.socials.links }}
+
+<div class="container | flow">
+    <div class="wrapper">
+        <article class="about | flow">
+            <h2 class="color-neutral-100">{{ .Params.footer.about_title }}</h2>
+            <p>{{ .Params.footer.about_description }}</p>
+        </article>
+
+        <article class="links | flow">
+            <h2 class="color-neutral-100">{{ .Params.footer.quick_links_title  }}</h2>
+            <ul>
+                {{ with site.Menus.main }}
+                    {{ range . }}
+                        <li>
+                            <a href="{{ .PageRef }}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </article>
+
+        <ul class="socials">
+            {{ range $socials }}
+                <li>
+                    <a target="_blank" rel="noopener" href="{{ .url }}">
+                        {{ partial (printf "icons/%s.html" .name)  }}
+                        <span class="sr-only">{{ .sr_text }}</span>
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+
+
+</div>

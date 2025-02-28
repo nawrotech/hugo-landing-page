@@ -1,0 +1,32 @@
+baseURL: https://example.org/
+languageCode: 'en-us'
+title: "Leno landing pages"
+theme: base
+disableKinds: ["taxonomy"]
+
+menus:
+  main:
+  - name: Home
+    pageRef: /
+    weight: 10
+  - name: Features
+    pageRef: /#features
+    weight: 20
+  - name: Preview
+    pageRef: /#preview
+    weight: 30
+  - name: Details
+    pageRef: /#details
+    weight: 40
+  - name: Download
+    pageRef: /#download
+
+
+params:
+  author: 'Nawrotech'
+  description: "Extremely well desinged landing page of the renowned tech company"
+  keywords: 
+    - app
+    - landing
+    - page
+    - tech

@@ -1,0 +1,39 @@
+<nav class="nav">
+    <div class="container">
+        <div class="wrapper | flow">
+            <a href="/">
+                <img class="logo" src="{{ "images/logo.svg" | relURL }}" alt="logo">
+            </a>
+    
+          
+            <label class="hamburger-menu" for="hamburger-menu">
+                <input id="hamburger-menu" type="checkbox">
+                {{ partial "icons/hamburger_menu" . }}
+            </label>
+              
+            <ul>
+                {{ with site.Menus.main }}
+                    {{ range . }}
+                        <li>
+                            <a href="{{ .PageRef }}">{{ .Name }}</a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+    
+            
+                {{ with  partial "filtered-socials.html" (slice "facebook" "x") }}
+                    {{ range . }}
+                        <li>
+                            <a href="{{ .url }}">
+                                <span class="sr-only">{{ .sr_text }}</span>
+                                {{ partial (printf "icons/%s.html" .name) . }}
+                            </a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+                             
+            </ul>
+        </div>
+  
+    </div>
+</nav>

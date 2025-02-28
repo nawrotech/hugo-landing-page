@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ $root := . }} 
+{{ with .Params.sections }}
+  {{ range . }}
+    {{ $partialName := printf "%s.html" .name  }}
+
+    {{/*  {{ partial $partialName . }}  */}}
+
+    {{ partial $partialName (dict "section" . "root" $root)  }}
+  {{ end }}
+  {{ else }}
+    <p>No section found!</p>
+{{ end }}
+
+{{ end }}

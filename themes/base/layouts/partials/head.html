@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="author" content="{{ .Site.Params.author }}">
+
+{{- if .IsHome -}}
+    <meta name="description" content="{{ site.Params.description }}">
+    {{ else }}
+    <meta name="description" content="{{ .Page.Description }}">
+{{- end -}}
+
+
+{{- if .IsHome -}}
+    <meta name="keywords" content="{{ delimit site.Params.keywords ", " ", and " }}">
+    {{- else -}}
+    <meta name="keywords" content="{{ delimit .Keywords ", " ", and " }}">
+{{- end -}}
+
+
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+
+{{ with resources.Match "css/*" }}
+    {{ with resources.Concat "css/style.css" . | minify | fingerprint  }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+{{ end }}
+
+
+
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}

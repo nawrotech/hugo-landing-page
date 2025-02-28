@@ -1,0 +1,58 @@
+.details {
+  padding-block: var(--spacing-96);
+  text-align: center;
+
+  @media (width > 48em) {
+    text-align: left;
+  }
+
+  .btn {
+    color: var(--neutral-100)
+  }
+
+  .wrapper {
+    display: grid;
+    gap: var(--spacing-80);
+    max-inline-size: 400px;
+    margin-inline: auto;
+
+    @media (width > 48em) {
+      max-inline-size: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+
+
+  .card {
+    --flow-space: var(--fs-32);
+  }
+
+  dl {
+    @media (width > 48em) {
+      grid-column: 1 / 3;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  dd {
+    font-size: var(--fs-20);
+  }
+
+  strong {
+    font-size: 2.75rem;
+  }
+
+  svg {
+    inline-size: 4.5em;
+    block-size: 4.5em; 
+    display: block;
+    margin-inline: auto;
+    fill: var(--accent-400);
+    margin-bottom: 1rem;
+
+
+  }
+
+} 

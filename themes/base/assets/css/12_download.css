@@ -1,0 +1,35 @@
+.download {
+    --flow-space: 2rem;
+    padding-block: var(--spacing-160);
+  
+    background-image: url("/images/download-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: purple;
+  
+    .wrapper {
+      max-inline-size: 500px;
+      margin-inline: auto;
+      display: grid;
+      gap: 3rem;
+  
+      @media(width > 62em) {
+        max-inline-size: 100%;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    p {
+      font-size: var(--fs-24);
+    }
+  
+    .content {
+      @media(width > 62em) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+    }
+  
+  }

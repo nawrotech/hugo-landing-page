@@ -1,0 +1,24 @@
+{
+    "links": [
+        {
+            "name": "facebook",
+            "url": "https://facebook.com",
+            "sr_text": "Visit facebook.com"
+          },
+          {
+            "name": "x",
+            "url": "https://twitter.com",
+            "sr_text": "Visit x.com"
+          },
+          {
+            "name": "linkedin",
+            "url": "https://linkedin.com",
+            "sr_text": "Visit linkedin.com"
+          },
+          {
+            "name": "instagram",
+            "url": "https://instagram.com",
+            "sr_text": "Visit instagram.com"
+          }
+    ]
+  }

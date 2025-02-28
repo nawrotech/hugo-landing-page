@@ -1,0 +1,25 @@
+<section class="home">
+    <div class="container">
+        <div class="wrapper">
+            <div class="content | flow">
+                <h1 class="upper">{{ .section.headline | markdownify }}</h1>
+                <p class="subtitle">{{ .section.subtitle  }}</p>
+          
+                <div class="cta-buttons-wrapper">
+                    {{ with  .root.Params.cta_buttons }}
+                        {{ range . }}
+                            {{ partial "cta-button.html" . }}
+                        {{ end }}
+                    {{ end }}
+                </div>
+
+            </div>
+
+            {{ partial "image.html" (
+                dict "resourceSrc" (resources.GetMatch .section.img_path) 
+                      "altText" "Phone holding phone displaying text: 'to the moon and back'") }}
+      
+        </div>
+    </div>
+</section>
+

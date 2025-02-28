@@ -1,0 +1,41 @@
+<section id="details" class="details | bg-primary-500" >
+    <div class="container">
+        <div class="wrapper">
+
+            {{ partial "image.html" (
+                dict "resourceSrc" (resources.GetMatch .section.img_1.path) 
+                      "altText"  .section.img_1.alt) }}
+
+            <article class="card | flow">
+                <h2>{{ .section.card_1.title }}</h2>
+                <p>{{ .section.card_1.description }}</p>
+                <button class="btn">{{ .section.card_1.cta_button_text }}</button>
+            </article>
+
+            <article class="card | flow">
+                <h2>{{ .section.card_2.title }}</h2>
+                <p>{{ .section.card_2.description }}</p>
+                <button class="btn">{{ .section.card_2.cta_button_text }}</button>
+            </article>
+
+            {{ partial "image.html" (
+                dict "resourceSrc" (resources.GetMatch .section.img_2.path) 
+                      "altText"  .section.img_2.alt) }}
+
+            <dl>
+                {{ range .section.stats }}
+                <div class="dl-item | flow">
+                    <dt>
+                        {{ partial (printf "icons/%s.html" .icon) . }}
+                        <strong>{{ .quantity }}</strong>
+                        
+                    </dt>
+                    <dd>{{ .text }}</dd>
+                </div>
+                {{ end }}
+            </dl>
+     
+        </div>
+
+    </div>
+</section>

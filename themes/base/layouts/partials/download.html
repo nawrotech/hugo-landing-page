@@ -1,0 +1,25 @@
+<section id="download" class="download | text-center">
+    <div class="container">
+
+        <div class="wrapper">
+            {{ partial "image.html" (
+                dict "resourceSrc" (resources.GetMatch .section.img_path) 
+                      "altText" "Phone holding phone displaying text: 'to the moon and back'") }}
+    
+    
+            <div class="content | flow">
+                <p>{{ .section.description }}</p>
+                
+                <div class="cta-buttons-wrapper ">
+                    {{ with  .root.Params.cta_buttons }}
+                        {{ range . }}
+                            {{ partial "cta-button.html" . }}
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        
+        </div>        
+    
+    </div>  
+</section>

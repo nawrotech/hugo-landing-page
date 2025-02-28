@@ -22,11 +22,11 @@
                 <source srcset="{{ $webp.RelPermalink }}" type="image/webp" >
                 
                 <img 
-                    src=""
-                        alt="{{ $altText }}" 
-                        decoding="async" 
-                        loading="lazy" 
-                        width="{{ $webp.Width }}" height="{{ $webp.Height }}" />
+                    src="{{ $fallback.RelPermalink }}"
+                    alt="{{ $altText }}" 
+                    decoding="async" 
+                    loading="lazy" 
+                    width="{{ $webp.Width }}" height="{{ $webp.Height }}" />
             </picture>
                 
 {{ end }}

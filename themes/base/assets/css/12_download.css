@@ -1,8 +1,7 @@
 .download {
     --flow-space: 2rem;
     padding-block: var(--spacing-160);
-  
-    background-image: url("/images/download-background.jpg");
+    background-image: url("/images/background.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
